@@ -1,0 +1,166 @@
+# AI-Enhanced Blockchain System Configuration for BRICS DeFi Testnet
+
+# Blockchain network configuration
+blockchain:
+  network_id: "brics-defi-testnet"
+  consensus_protocol: "ai_enhanced_raft"  # AI-enhanced version of Raft consensus
+  block_time: 2000  # milliseconds
+  max_tx_per_block: 1000
+  nodes:
+    - id: "node-brazil-01"
+      country: "Brazil"
+      role: "validator"
+      endpoint: "brazil-node1.testnet.brics-blockchain.org:7051"
+      capacity: "high"
+    - id: "node-russia-01"
+      country: "Russia"
+      role: "validator"
+      endpoint: "russia-node1.testnet.brics-blockchain.org:7051"
+      capacity: "high"
+    - id: "node-india-01"
+      country: "India"
+      role: "validator"
+      endpoint: "india-node1.testnet.brics-blockchain.org:7051"
+      capacity: "high"
+    - id: "node-china-01"
+      country: "China"
+      role: "validator"
+      endpoint: "china-node1.testnet.brics-blockchain.org:7051"
+      capacity: "high"
+    - id: "node-south-africa-01"
+      country: "South Africa"
+      role: "validator"
+      endpoint: "south-africa-node1.testnet.brics-blockchain.org:7051"
+      capacity: "high"
+  # Additional nodes for scalability testing
+  additional_nodes:
+    - id: "node-brazil-02"
+      country: "Brazil"
+      role: "validator"
+      endpoint: "brazil-node2.testnet.brics-blockchain.org:7051"
+      capacity: "medium"
+    - id: "node-russia-02"
+      country: "Russia"
+      role: "validator"
+      endpoint: "russia-node2.testnet.brics-blockchain.org:7051"
+      capacity: "medium"
+    - id: "node-india-02"
+      country: "India"
+      role: "validator"
+      endpoint: "india-node2.testnet.brics-blockchain.org:7051"
+      capacity: "medium"
+    - id: "node-china-02"
+      country: "China"
+      role: "validator"
+      endpoint: "china-node2.testnet.brics-blockchain.org:7051"
+      capacity: "medium"
+    - id: "node-south-africa-02"
+      country: "South Africa"
+      role: "validator"
+      endpoint: "south-africa-node2.testnet.brics-blockchain.org:7051"
+      capacity: "medium"
+
+# AI components configuration
+ai:
+  predictive_validation:
+    model_type: "transformer"  # Options: cnn, lstm, transformer
+    model_path: "models/predictive_validator.pt"
+    batch_size: 64
+    threshold: 0.85  # Confidence threshold for pre-validation
+    features:
+      - "tx_type"
+      - "sender_history"
+      - "receiver_history" 
+      - "amount"
+      - "fee"
+      - "gas_limit"
+      - "data_size"
+      - "time_of_day"
+  
+  resource_allocation:
+    algorithm: "ppo"  # Proximal Policy Optimization
+    learning_rate: 0.0003
+    discount_factor: 0.99
+    entropy_coefficient: 0.01
+    clip_range: 0.2
+    value_coefficient: 0.5
+    update_interval: 10000  # steps
+    observation_features:
+      - "transaction_queue_length"
+      - "node_cpu_usage"
+      - "node_memory_usage" 
+      - "network_latency"
+      - "transaction_types_ratio"
+      - "historical_validation_time"
+
+  anomaly_detection:
+    model_type: "autoencoder"  # Options: autoencoder, isolation_forest, lstm
+    training_rounds: 20  # Number of federated learning rounds
+    local_epochs: 5  # Number of local epochs per round
+    aggregation_strategy: "fedavg"  # Options: fedavg, fedprox
+    clients_per_round: 5  # Number of clients participating in each round
+    mu: 0.01  # FedProx proximal term
+    features:
+      - "transaction_amount"
+      - "transaction_frequency"
+      - "gas_price"
+      - "contract_interactions"
+      - "new_address_interaction"
+      - "unusual_time_patterns"
+
+# Hyperledger Fabric specific configuration
+fabric:
+  channel_name: "brics-channel"
+  chaincode:
+    path: "blockchain/smart_contracts"
+    name: "brics-defi"
+    version: "1.0"
+    init_args: ["init"]
+  orderer:
+    url: "orderer.testnet.brics-blockchain.org:7050"
+    tls_cert: "config/crypto/orderer/tls-cert.pem"
+  peer:
+    gossip_bootstrap: "peer0.org1.testnet.brics-blockchain.org:7051"
+    gossip_external_endpoint: "peer0.org1.testnet.brics-blockchain.org:7051"
+  organizations:
+    - name: "Brazil"
+      msp_id: "BrazilMSP"
+      ca_url: "ca.brazil.testnet.brics-blockchain.org:7054"
+    - name: "Russia"
+      msp_id: "RussiaMSP"
+      ca_url: "ca.russia.testnet.brics-blockchain.org:7054"
+    - name: "India"
+      msp_id: "IndiaMSP"
+      ca_url: "ca.india.testnet.brics-blockchain.org:7054"
+    - name: "China"
+      msp_id: "ChinaMSP"
+      ca_url: "ca.china.testnet.brics-blockchain.org:7054"
+    - name: "SouthAfrica"
+      msp_id: "SouthAfricaMSP"
+      ca_url: "ca.southafrica.testnet.brics-blockchain.org:7054"
+
+# Evaluation settings
+evaluation:
+  duration: 3600  # seconds (1 hour)
+  transaction_rate: 500  # transactions per second
+  metrics:
+    - "tps"
+    - "latency"
+    - "energy_consumption"
+    - "fraud_detection_accuracy"
+  baseline_comparison: true
+  log_level: "info"
+  output_directory: "evaluation/results"
+
+# API server configuration
+api:
+  host: "0.0.0.0"
+  port: 8080
+  ssl_enabled: false
+  rate_limit: 100  # requests per minute
+  endpoints:
+    - "/transactions"
+    - "/blocks"
+    - "/metrics"
+    - "/network_status"
+    - "/validators" 

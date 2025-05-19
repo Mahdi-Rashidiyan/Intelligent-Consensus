@@ -1,0 +1,37 @@
+2025-05-19 17:24:15,218 - __main__ - INFO - Configuration loaded from config/default.yaml
+2025-05-19 17:24:15,219 - __main__ - INFO - BRICS Blockchain Application initialized
+2025-05-19 17:24:15,231 - blockchain.consensus.ai_consensus - INFO - AI-Enhanced Consensus mechanism initialized
+2025-05-19 17:24:15,231 - blockchain.network - INFO - Blockchain network brics-defi-testnet initialized with ai_enhanced_raft consensus
+2025-05-19 17:24:15,232 - blockchain.network - INFO - Node node-brazil-01 from Brazil initialized with high capacity
+2025-05-19 17:24:15,232 - blockchain.network - INFO - Node node-brazil-01 added to the network
+2025-05-19 17:24:15,233 - blockchain.network - INFO - Node node-russia-01 from Russia initialized with high capacity
+2025-05-19 17:24:15,233 - blockchain.network - INFO - Node node-russia-01 added to the network
+2025-05-19 17:24:15,234 - blockchain.network - INFO - Node node-india-01 from India initialized with high capacity
+2025-05-19 17:24:15,234 - blockchain.network - INFO - Node node-india-01 added to the network
+2025-05-19 17:24:15,235 - blockchain.network - INFO - Node node-china-01 from China initialized with high capacity
+2025-05-19 17:24:15,235 - blockchain.network - INFO - Node node-china-01 added to the network
+2025-05-19 17:24:15,235 - blockchain.network - INFO - Node node-south-africa-01 from South Africa initialized with high capacity
+2025-05-19 17:24:15,236 - blockchain.network - INFO - Node node-south-africa-01 added to the network
+2025-05-19 17:24:15,236 - __main__ - INFO - Blockchain network set up with 5 nodes
+2025-05-19 17:24:15,237 - ai_modules.predictive_validation.model - INFO - Transaction feature extractor initialized
+2025-05-19 17:24:15,305 - ai_modules.predictive_validation.model - WARNING - Model file not found at models/predictive_validator.pt, using untrained models
+2025-05-19 17:24:15,306 - ai_modules.predictive_validation.model - INFO - Predictive validator initialized
+2025-05-19 17:24:15,307 - blockchain.consensus.ai_consensus - INFO - Predictive validator set for consensus mechanism
+2025-05-19 17:24:15,308 - blockchain.network - INFO - Predictive transaction validator set for the network
+2025-05-19 17:24:15,309 - ai_modules.resource_allocation.optimizer - INFO - PPO agent initialized
+2025-05-19 17:24:15,309 - ai_modules.resource_allocation.optimizer - INFO - Resource optimizer initialized
+2025-05-19 17:24:15,309 - blockchain.network - INFO - Resource optimizer set for the network
+2025-05-19 17:24:20,233 - ai_modules.anomaly_detection.federated_detector - INFO - Federated client client-1 initialized
+2025-05-19 17:24:20,235 - ai_modules.anomaly_detection.federated_detector - INFO - Federated client client-2 initialized
+2025-05-19 17:24:20,236 - ai_modules.anomaly_detection.federated_detector - INFO - Federated client client-3 initialized
+2025-05-19 17:24:20,239 - ai_modules.anomaly_detection.federated_detector - INFO - Federated client client-4 initialized
+2025-05-19 17:24:20,242 - ai_modules.anomaly_detection.federated_detector - INFO - Federated client client-5 initialized
+2025-05-19 17:24:20,242 - ai_modules.anomaly_detection.federated_detector - INFO - Federated anomaly detector initialized with 5 clients
+2025-05-19 17:24:20,243 - blockchain.network - INFO - Anomaly detector set for the network
+2025-05-19 17:24:20,243 - __main__ - INFO - AI components set up
+2025-05-19 17:24:20,244 - blockchain.network - INFO - Blockchain network brics-defi-testnet started with 5 nodes
+2025-05-19 17:24:20,245 - __main__ - INFO - Blockchain network started
+2025-05-19 17:24:20,245 - __main__ - INFO - Press Ctrl+C to stop the network
+2025-05-19 17:24:31,301 - blockchain.network - INFO - Blockchain network brics-defi-testnet stopped
+2025-05-19 17:24:31,302 - __main__ - INFO - Blockchain network stopped
+2025-05-19 17:24:31,302 - __main__ - INFO - Application terminated
